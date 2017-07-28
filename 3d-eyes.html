@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://js.jirengu.com
+
+Copyright (c) 2017 by limingru (http://js.jirengu.com/zimim/5/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" width="device-width">
+  <title>3D眼</title>
+<style id="jsbin-css">
+/*body{*/
+  /*margin:0*/
+/*}*/
+
+/*.wrapper{ width:100vw; height:100vh; !* border:2px solid green; *! display:flex; flex-direction:column; justify-content:center; align-items:center; }*/
+
+
+/*!*这是第一行第一只眼*!*/
+
+/*.father{ display:flex; }*/
+
+/*.son1{ width:250px; height:250px; border-radius:50%; background:#DDD; display:flex; !* position:absolute; transform:translate(-50%,-50%); *! justify-content:center; align-items:center; transform-style:preserve-3d; transition:transform 1s; transform:rotateX(45deg) rotateY(45deg); }*/
+/*.son1 > .child1{ width:170px; height:170px; border-radius:50%; background:red; position:absolute; transform:translate(-50%,-50%); opacity:0.8; transform:translateZ(30px); }*/
+/*.son1 > .child2{ width:100px; height:100px; background:black; border-radius:50%; position:absolute; transform:translate(-50%,-50%); opacity:0.8; transform:translateZ(60px); }*/
+/*.son1 > .child3{ width:40px; height:40px; background:yellow; border-radius:50%; position:absolute; transform:translate(-50%,-50%); opacity:0.8; transform:translateZ(90px); }*/
+
+/*!*这是第一行第二只眼*!*/
+
+
+/*.son2{ width:250px; height:250px; border-radius:50%; background:#ddd; display:flex; justify-content:center; align-items:center; transition:transform 1s; transform-style:preserve-3d; transform:rotateX(15deg) rotateY(45deg); }*/
+/*.son2 > .child4 { width:170px; height:170px; border-radius:50%; background:red; position:absolute; opacity:0.8; transform:translateZ(30px); }*/
+/*.son2 > .child5{ width:100px; height:100px; background:black; border-radius:50%; position:absolute; opacity:0.8; transform:translateZ(60px); }*/
+/*.son2 > .child6{ width:40px; height:40px; background:yellow; border-radius:50%; position:absolute; opacity:0.8; transform:translateZ(90px); }*/
+
+/*!*这是第二行的3D眼*!*/
+
+/*.mother{ display:flex; }*/
+
+/*.daughter1{ width:250px; height:250px; border-radius:50%; background:#ddd; display:flex; justify-content:center; align-items:center; transition:transform 1s; transform-style:preserve-3d; transform:rotateX(15deg) rotateY(45deg); }*/
+/*.daughter1 > .child7{ width:170px; height:170px; border-radius:50%; background:red; position:absolute; opacity:0.8; transform:translateZ(30px); }*/
+/*.daughter1 > .child8{ width:100px; height:100px; background:black; border-radius:50%; position:absolute; opacity:0.8; display:flex; transform:translateZ(60px); }*/
+/*.daughter1 > .child9{ width:40px; height:40px; background:yellow; border-radius:50%; position:absolute; opacity:0.8; transform:translateZ(90px); }*/
+
+/*.daughter2{ width:250px; height:250px; border-radius:50%; background:#ddd; display:flex; justify-content:center; align-items:center; transition:transform 1s; transform-style:preserve-3d; transform:rotateX(15deg) rotateY(45deg); }*/
+/*.daughter2 > .child10{ width:170px; height:170px; border-radius:50%; background:red; position:absolute; opacity:0.8; transform:translateZ(30px); }*/
+/*.daughter2 > .child11{ width:100px; height:100px; background:black; border-radius:50%; position:absolute; opacity:0.8; transform:translateZ(60px); }*/
+/*.daughter2 > .child12{ width:40px; height:40px; background:yellow; border-radius:50%; opacity:0.8; transform:translateZ(90px); }*/
+body{
+  margin:0
+}
+
+.wrapper{ width:100vw; height:100vh; /* border:2px solid green; */ display:-webkit-box; display:-webkit-flex; display:-ms-flexbox; display:flex; -webkit-box-orient:vertical; -webkit-box-direction:normal; -webkit-flex-direction:column; -ms-flex-direction:column; flex-direction:column; -webkit-box-pack:center; -webkit-justify-content:center; -ms-flex-pack:center; justify-content:center; -webkit-box-align:center; -webkit-align-items:center; -ms-flex-align:center; align-items:center; }
+
+
+/*这是第一行第一只眼*/
+
+.father{ display:-webkit-box; display:-webkit-flex; display:-ms-flexbox; display:flex; }
+
+.son1{ width:250px; height:250px; -webkit-border-radius:50%; border-radius:50%; background:#DDD; display:-webkit-box; display:-webkit-flex; display:-ms-flexbox; display:flex; /* position:absolute; transform:translate(-50%,-50%); */ -webkit-box-pack:center; -webkit-justify-content:center; -ms-flex-pack:center; justify-content:center; -webkit-box-align:center; -webkit-align-items:center; -ms-flex-align:center; align-items:center; -webkit-transform-style:preserve-3d; transform-style:preserve-3d; -webkit-transition:-webkit-transform 1s; transition:-webkit-transform 1s; -o-transition:transform 1s; transition:transform 1s; transition:transform 1s, -webkit-transform 1s; -webkit-transform:rotateX(45deg) rotateY(45deg); transform:rotateX(45deg) rotateY(45deg); }
+.son1 > .child1{ width:170px; height:170px; -webkit-border-radius:50%; border-radius:50%; background:red; position:absolute; -webkit-transform:translate(-50%,-50%); -ms-transform:translate(-50%,-50%); transform:translate(-50%,-50%); opacity:0.8; -webkit-transform:translateZ(30px); transform:translateZ(30px); }
+.son1 > .child2{ width:100px; height:100px; background:black; -webkit-border-radius:50%; border-radius:50%; position:absolute; -webkit-transform:translate(-50%,-50%); -ms-transform:translate(-50%,-50%); transform:translate(-50%,-50%); opacity:0.8; -webkit-transform:translateZ(60px); transform:translateZ(60px); }
+.son1 > .child3{ width:40px; height:40px; background:yellow; -webkit-border-radius:50%; border-radius:50%; position:absolute; -webkit-transform:translate(-50%,-50%); -ms-transform:translate(-50%,-50%); transform:translate(-50%,-50%); opacity:0.8; -webkit-transform:translateZ(90px); transform:translateZ(90px); }
+
+/*这是第一行第二只眼*/
+
+
+.son2{ width:250px; height:250px; -webkit-border-radius:50%; border-radius:50%; background:#ddd; display:-webkit-box; display:-webkit-flex; display:-ms-flexbox; display:flex; -webkit-box-pack:center; -webkit-justify-content:center; -ms-flex-pack:center; justify-content:center; -webkit-box-align:center; -webkit-align-items:center; -ms-flex-align:center; align-items:center; -webkit-transition:-webkit-transform 1s; transition:-webkit-transform 1s; -o-transition:transform 1s; transition:transform 1s; transition:transform 1s, -webkit-transform 1s; -webkit-transform-style:preserve-3d; transform-style:preserve-3d; -webkit-transform:rotateX(15deg) rotateY(45deg); transform:rotateX(15deg) rotateY(45deg); }
+.son2 > .child4 { width:170px; height:170px; -webkit-border-radius:50%; border-radius:50%; background:red; position:absolute; opacity:0.8; -webkit-transform:translateZ(30px); transform:translateZ(30px); }
+.son2 > .child5{ width:100px; height:100px; background:black; -webkit-border-radius:50%; border-radius:50%; position:absolute; opacity:0.8; -webkit-transform:translateZ(60px); transform:translateZ(60px); }
+.son2 > .child6{ width:40px; height:40px; background:yellow; -webkit-border-radius:50%; border-radius:50%; position:absolute; opacity:0.8; -webkit-transform:translateZ(90px); transform:translateZ(90px); }
+
+/*这是第二行的3D眼*/
+
+.mother{ display:-webkit-box; display:-webkit-flex; display:-ms-flexbox; display:flex; }
+
+.daughter1{ width:250px; height:250px; -webkit-border-radius:50%; border-radius:50%; background:#ddd; display:-webkit-box; display:-webkit-flex; display:-ms-flexbox; display:flex; -webkit-box-pack:center; -webkit-justify-content:center; -ms-flex-pack:center; justify-content:center; -webkit-box-align:center; -webkit-align-items:center; -ms-flex-align:center; align-items:center; -webkit-transition:-webkit-transform 1s; transition:-webkit-transform 1s; -o-transition:transform 1s; transition:transform 1s; transition:transform 1s, -webkit-transform 1s; -webkit-transform-style:preserve-3d; transform-style:preserve-3d; -webkit-transform:rotateX(15deg) rotateY(45deg); transform:rotateX(15deg) rotateY(45deg); }
+.daughter1 > .child7{ width:170px; height:170px; -webkit-border-radius:50%; border-radius:50%; background:red; position:absolute; opacity:0.8; -webkit-transform:translateZ(30px); transform:translateZ(30px); }
+.daughter1 > .child8{ width:100px; height:100px; background:black; -webkit-border-radius:50%; border-radius:50%; position:absolute; opacity:0.8; display:-webkit-box; display:-webkit-flex; display:-ms-flexbox; display:flex; -webkit-transform:translateZ(60px); transform:translateZ(60px); }
+.daughter1 > .child9{ width:40px; height:40px; background:yellow; -webkit-border-radius:50%; border-radius:50%; position:absolute; opacity:0.8; -webkit-transform:translateZ(90px); transform:translateZ(90px); }
+
+.daughter2{ width:250px; height:250px; -webkit-border-radius:50%; border-radius:50%; background:#ddd; display:-webkit-box; display:-webkit-flex; display:-ms-flexbox; display:flex; -webkit-box-pack:center; -webkit-justify-content:center; -ms-flex-pack:center; justify-content:center; -webkit-box-align:center; -webkit-align-items:center; -ms-flex-align:center; align-items:center; -webkit-transition:-webkit-transform 1s; transition:-webkit-transform 1s; -o-transition:transform 1s; transition:transform 1s; transition:transform 1s, -webkit-transform 1s; -webkit-transform-style:preserve-3d; transform-style:preserve-3d; -webkit-transform:rotateX(15deg) rotateY(45deg); transform:rotateX(15deg) rotateY(45deg); }
+.daughter2 > .child10{ width:170px; height:170px; -webkit-border-radius:50%; border-radius:50%; background:red; position:absolute; opacity:0.8; -webkit-transform:translateZ(30px); transform:translateZ(30px); }
+.daughter2 > .child11{ width:100px; height:100px; background:black; -webkit-border-radius:50%; border-radius:50%; position:absolute; opacity:0.8; -webkit-transform:translateZ(60px); transform:translateZ(60px); }
+.daughter2 > .child12{ width:40px; height:40px; background:yellow; -webkit-border-radius:50%; border-radius:50%; opacity:0.8; -webkit-transform:translateZ(90px); transform:translateZ(90px); }
+
+
+
+</style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class=father>
+      <div class=son1>
+        <div class="child1"></div>
+        <div class="child2"></div>
+        <div class="child3"></div>
+      </div>
+      <div class=son2>
+        <div class="child4"></div>
+        <div class="child5"></div>
+        <div class="child6"></div>
+      </div>
+    </div>
+    <div class=mother>
+      <div class=daughter1>
+        <div class="child7"></div>
+        <div class="child8"></div>
+        <div class="child9"></div>
+      </div>
+      <div class=daughter2>
+        <div class="child10"></div>
+        <div class="child11"></div>
+        <div class="child12"></div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    function step(){
+      var x = Math.random() * 90 - 35
+      var y = Math.random() * 90 - 35
+      
+      var a = document.querySelector('.son1').style
+      a.transform = 'rotateX('+x+'deg) rotateY('+y+'deg)'
+      var b = document.querySelector('.son2').style
+      b.transform = 'rotateX('+x+'deg) rotateY('+(-y)+'deg)'
+      var c = document.querySelector('.daughter1').style
+      c.transform = 'rotateX('+(-x)+'deg) rotateY('+y+'deg)'
+      var d = document.querySelector('.daughter2').style
+      d.transform = 'rotateX('+(-x)+'deg) rotateY('+(-y)+'deg)'
+      setTimeout(step,1000)
+    }
+    step()
+    
+  </script>
+  
+</body>
+</html>
